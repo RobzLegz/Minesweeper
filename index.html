@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minesweeper | Single player puzzle game</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Clear a 10 X 10 board containing hidden mines or bombs without detonating any of them.">
+    <meta name="keywords" content="single player puzzle game minesweeper">
+</head>
+<body>
+    <h1>Minesweeper</h1>
+    <table id=grid class="grid"></table>
+    <button onclick="generateGrid()" onclick="refresh()">Reset mines</button>
+    <form>
+        <h2>Difficulty</h2>
+        <input type="radio" id="easy" name="difficulty" value="easy">
+        <label for="easy">Easy</label><br>
+        <input type="radio" id="hard" name="difficulty" value="hard">
+        <label for="hard">Hard</label><br>
+    </form>
+    <h2>Instructions:</h2>
+    <div class="instruction-container">
+        <p>1. Pick the difficulty level and click on "Reset mines".</p>
+        <p>2. On your first move click at any random place.</p>
+        <p>3. The number on table field is the mines adjacent to the block.</p>
+        <p>4. You will often come across a situation where you have to make a guess. (Usually this happens when the game is about to end)</p>
+    </div>
+</body>
+</html>
+<script src="app.js"></script>
+

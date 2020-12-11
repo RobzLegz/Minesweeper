@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url("resources/cavebg.jpg" );
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center; 
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    justify-content: center;
+}
+nav{
+    width: 100%;
+    height: 60px;
+    align-items: center;
+    justify-content: space-around;
+    display: flex;
+    background-color: rgba(0,0,0,0.6);
+}
+.links{
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+}
+.links a:hover{
+    border-bottom: 1px solid #fff;
+}
+label{
+    font-size: 20px;
+}
+a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 25px;
+    font-weight: normal;
+    font-weight: 500;
+    letter-spacing: 2px;
+    margin-top: 70px;
+}
+form{
+    margin: 30px;
+}
+input{
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+    border-radius: 50%;
+    cursor: pointer;
+    margin: 10px;
+    line-height: 20px;
+}
+.grid {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+}
+.grid:hover{
+    cursor: pointer;
+}
+.grid tr td{
+    border:1px solid #000000;
+    background: #fff;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+}
+
+.grid tr td.clicked {
+    background: #002244;
+}
+
+.grid tr td.mine {
+    background-image: url("resources/bombbetter.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+button {
+    margin: 12px;
+    width: 120px;
+    height: 50px;
+    border: none;
+    color: #fff;
+    background: linear-gradient(120deg, #002244, #333333);
+    border-radius: 20px;
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+button:hover{
+    cursor: pointer;
+    font-size: 18px;
+}
+@media (max-width:588px){
+    .grid tr td{
+        width: 30px;
+        height: 30px;
+    }
+    h1{
+        font-size: 23px;
+    }
+    .links{
+        width: 60%;
+        font-size: 17px;
+    }
+    h2{
+        font-size: 20px;
+    }
+}
+h2{
+    color: #fff;
+    font-size: 28px;
+    text-align: center;
+    margin-top: 50px;
+    font-weight: 500;
+}
+.instruction-container{
+    margin-top: 30px;
+    padding-bottom: 100px;
+}
+p{
+    padding: 10px;
+}

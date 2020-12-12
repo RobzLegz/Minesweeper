@@ -128,6 +128,7 @@ function searchFlag(){
 function flaggingCell(cell){    
     cell.innerHTML = "🚩";
     cell.classList.toggle("flagon");
+    //remove flags when clicked on a cell
     if (cell.classList.contains("flagon")){
         cell.innerHTML = "🚩";
         flagcount -= 1;

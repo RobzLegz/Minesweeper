@@ -12,21 +12,26 @@
 </head>
 <body>
     <h1>Minesweeper</h1>
-    <table id=grid class="grid"></table>
-    <button onclick="generateGrid()" onclick="refresh()">Reset mines</button>
+    <table id = "grid" class = "grid"></table>
+    <button id = "search-btn" onclick = "searchFlag()">Searching</button>
+    <button onclick = "generateGrid()" onclick = "refresh()">Reset mines</button>
     <form>
         <h2>Difficulty</h2>
-        <input type="radio" id="easy" name="difficulty" value="easy">
-        <label for="easy">Easy</label><br>
-        <input type="radio" id="hard" name="difficulty" value="hard">
-        <label for="hard">Hard</label><br>
+        <input type = "radio" id = "easy" name = "difficulty" value = "easy">
+        <label for = "easy">Easy</label><br>
+        <input type = "radio" id = "hard" name = "difficulty" value = "hard">
+        <label for = "hard">Hard</label><br>
     </form>
     <h2>Instructions:</h2>
-    <div class="instruction-container">
+    <div class = "instruction-container">
         <p>1. Pick the difficulty level and click on "Reset mines".</p>
         <p>2. On your first move click at any random place.</p>
         <p>3. The number on table field is the mines adjacent to the block.</p>
         <p>4. You will often come across a situation where you have to make a guess. (Usually this happens when the game is about to end)</p>
+        <p>5. You can switch between modes "searching" and "flaging" by clicking on button next to "Reset mines".</p>
+        <p>6. If you select flaging, you can mark spots, where you think the bomb is.</p>
+        <p>7. You can win by finding all the cells that aren't bombs.</p>
+        <p>8. You lose if you click on a cell that has a bomb (with searching mode on).</p>
     </div>
 </body>
 </html>

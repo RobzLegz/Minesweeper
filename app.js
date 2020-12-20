@@ -166,33 +166,37 @@ function clickedCell(cell) {
         
     
     } else {
-        //adds class "clicked" to clicked cells
-        cell.className = "clicked";
-        var mineCount = 0;
-        var cellCol = cell.cellIndex;
-        var cellRow = cell.parentNode.rowIndex;
-        //check if there is a mine next to opened cell
-        for (var i = Math.max(cellRow - 1, 0); i <= Math.min(cellRow + 1, 9); i++) {
-            for(var j = Math.max(cellCol -1, 0); j <= Math.min(cellCol + 1, 9); j++) {
-                //if there is a mine next to opened cell then add 1 to minecount
-                if (grid.rows[i].cells[j].getAttribute("data-mine") == "true"){
-                    mineCount += 1;
-                } 
-            }
-        }
-        cell.innerHTML = mineCount;       
-        
-        //if clicked on a cell with no mines around, then open cells that are next to it
-        if (mineCount == 0) { 
+        if (cell.classList.contains("flagon")){
+            return;
+        }else{
+            //adds class "clicked" to clicked cells
+            cell.className = "clicked";
+            var mineCount = 0;
+            var cellCol = cell.cellIndex;
+            var cellRow = cell.parentNode.rowIndex;
+            //check if there is a mine next to opened cell
             for (var i = Math.max(cellRow - 1, 0); i <= Math.min(cellRow + 1, 9); i++) {
                 for(var j = Math.max(cellCol -1, 0); j <= Math.min(cellCol + 1, 9); j++) {
-                    if (grid.rows[i].cells[j].innerHTML == ""){
-                        clickedCell(grid.rows[i].cells[j]);
+                    //if there is a mine next to opened cell then add 1 to minecount
+                    if (grid.rows[i].cells[j].getAttribute("data-mine") == "true"){
+                        mineCount += 1;
+                    } 
+                }
+            }
+            cell.innerHTML = mineCount;       
+        
+            //if clicked on a cell with no mines around, then open cells that are next to it
+            if (mineCount == 0) { 
+                for (var i = Math.max(cellRow - 1, 0); i <= Math.min(cellRow + 1, 9); i++) {
+                    for(var j = Math.max(cellCol -1, 0); j <= Math.min(cellCol + 1, 9); j++) {
+                        if (grid.rows[i].cells[j].innerHTML == ""){
+                            clickedCell(grid.rows[i].cells[j]);
+                        }
                     }
                 }
             }
-        }
-        checkIfCompleated();  
+            checkIfCompleated();  
+        }    
     }
     
 }
